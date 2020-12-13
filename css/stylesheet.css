@@ -1,0 +1,14 @@
+.headingBG {
+    background-color: darkgrey;
+}
+
+.nav-item {
+    font-family: 'Oswald', sans-serif;
+    margin-right: 25px;
+    margin-left: 25px;
+}
+
+.nav-item:hover {
+    background-color: darkgreen;
+    border-radius: 10em;
+}
