@@ -69,7 +69,7 @@ return (
                 <Card.Body>
                     <Card.Title>Sell</Card.Title>
                     <Card.Text>
-                    <p style={{fontSize:20}}>Sell your produce with the nearest buyer or store at your convenience. List your price, network with the community and be your own master     </p>
+                    <p style={{fontSize:20}}>Sell your products with the nearest buyer or store at your convenience. List your price, network with the community and be your own master     </p>
                     </Card.Text>
                 </Card.Body>
                 <ListGroup className="list-group-flush">
@@ -77,7 +77,7 @@ return (
                 </ListGroup>
                 <Card.Body>
                     <div style={{border: '2px solid blue'}}>
-                    <Card.Link href="#" style={{marginLeft:100}}>Sell</Card.Link>
+                    <Card.Link href="/sell" style={{marginLeft:100}}>Sell</Card.Link>
                     </div>
                    
                 </Card.Body>
