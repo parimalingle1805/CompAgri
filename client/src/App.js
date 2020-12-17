@@ -12,6 +12,7 @@ import Login from "./components/auth/Login";
 import PrivateRoute from "./components/private-route/PrivateRoute";
 import Dashboard from "./components/dashboard/Dashboard";
 import Shop from "./components/shop/Shop";
+import Sell from "./components/sell/Sell";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Check for token to keep user logged in
@@ -45,6 +46,7 @@ class App extends Component {
             <Switch>
               <PrivateRoute exact path="/dashboard" component={Dashboard} />
               <PrivateRoute exact path="/shop" component={Shop} />
+              <PrivateRoute exact path="/sell" component={Sell} />
             </Switch>
           </div>
         </Router>

@@ -29,8 +29,8 @@ return (
              <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
                     <Nav.Link href="/dashboard" style={{marginLeft:30, fontSize:30}}>Dashboard</Nav.Link>
-                    <Nav.Link href="/dashboard" style={{marginLeft:30, fontSize:30}}>Shop</Nav.Link>
-                    <Nav.Link href="/dashboard" style={{marginLeft:30, fontSize:30}}>Sell</Nav.Link>
+                    <Nav.Link href="/shop" style={{marginLeft:30, fontSize:30}}>Shop</Nav.Link>
+                    <Nav.Link href="/sell" style={{marginLeft:30, fontSize:30}}>Sell</Nav.Link>
                     <Nav.Link href="#link" onClick={this.onLogoutClick} style={{marginLeft:650, fontSize:30}}>Log Out</Nav.Link>
             
             </Nav>
