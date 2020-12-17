@@ -8,6 +8,8 @@ var bodyParser = require("body-parser");
 
 var passport = require("passport");
 
+var path = require('path');
+
 var users = require("./routes/api/users");
 
 var app = express(); // Bodyparser middleware
@@ -33,7 +35,16 @@ app.use(passport.initialize()); // Passport config
 require("./config/passport")(passport); // Routes
 
 
-app.use("/api/users", users);
+app.use("/api/users", users); //serve static assets
+
+if (process.env.NODE_ENV === 'production') {
+  //set static folder
+  app.use(express["static"](client / build));
+  app.get('*', function (req, res) {
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+  });
+}
+
 var port = process.env.PORT || 5000; // process.env.port is Heroku's port if you choose to deploy the app there
 
 app.listen(port, function () {
