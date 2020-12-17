@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { registerUser } from "../../actions/authActions";
 import classnames from "classnames";
+import farm from "./farm.jpg";
 
 
 class Register extends Component {
@@ -48,9 +49,9 @@ this.props.registerUser(newUser, this.props.history);
 render() {
     const { errors } = this.state;
 return (
-      <div className="container">
-        <div className="row">
-          <div className="col s8 offset-s2">
+      <div style={{height:750,backgroundImage: `url(${farm})`,backgroundSize:"cover"}}>
+        <div style={{padding:100,paddingRight:500,display:"flex",justifyContent:"center" }} className="row">
+          <div className="col s8 offset-s2"  style={{backgroundColor:"white",borderRadius:"15px"}}>
             <Link to="/" className="btn-flat waves-effect">
               <i className="material-icons left">keyboard_backspace</i> Back to
               home
@@ -126,7 +127,8 @@ return (
                     width: "150px",
                     borderRadius: "3px",
                     letterSpacing: "1.5px",
-                    marginTop: "1rem"
+                    marginTop: "1rem",
+                    marginBottom:"2rem"
                   }}
                   type="submit"
                   className="btn btn-large waves-effect waves-light hoverable blue accent-3"

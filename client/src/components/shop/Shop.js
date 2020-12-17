@@ -7,6 +7,7 @@ import seed from './seed.jpg';
 import fert from './fert.jpg';
 import mach from './mach.png';
 import pest from './pest.jpg';
+import wall from './wall.jpg';
 class Dashboard extends Component {
   onLogoutClick = e => {
     e.preventDefault();
@@ -21,7 +22,7 @@ render() {
     
 return (
     
-      <div style={{width:"100%",height:"100%"}}>
+      <div style={{width:"100%",height:"100%", backgroundImage: `url(${wall})`,backgroundSize:"cover",backgroundRepeat:"no-repeat"}}>
      
          <Navbar bg="dark" variant="dark" expand="lg" >
              <Navbar.Brand href="/dashboard"><h1>Farmer's Forum</h1></Navbar.Brand>
@@ -38,60 +39,65 @@ return (
             </Navbar.Collapse>
         </Navbar>
         
+        
        <div>
-         <div style={{display:"flex", justifyContent:"center", marginTop:50}}>
-           <h1>Products you can buy</h1>
+         <div style={{display:"flex", justifyContent:"center", marginTop:50,color:"white"}}>
+           <h1 style={{fontSize:100}}>Products you can buy</h1>
          </div>
          <div style={{display:"grid",gridTemplateColumns:"50% 50%", marginTop:100}}>
            <div style={{display:"flex", justifyContent:"center"}}>
-             <h2>1. Seeds</h2>
-             
-             <div style={{marginLeft:100}}>
-             <img src={seed} style={{width:"100%"}}></img>
-             <h3 style={{marginTop:30}}>Price starting from: Rs. 100 </h3>
-                <Button variant="primary" style={{borderRadius:"20px", marginTop:20, marginBottom:100}}>
-                  Buy Now
-                </Button>
-             </div>
+           <Card style={{ width: '30rem',padding:30 }}>
+              <Card.Img variant="top" src={seed} />
+              <Card.Body>
+                <Card.Title><h1 style={{marginTop:13}}>Seeds</h1></Card.Title>
+                <Card.Text>
+                  Good Quality seeds can improve your yield by a great scale.
+                </Card.Text>
+                <Button variant="primary">Buy: Rs.100/Kg</Button>
+              </Card.Body>
+            </Card>
            </div>
 
 
            <div style={{display:"flex", justifyContent:"center"}}>
-             <h2>2. Fertilizers</h2>
-             
-             <div style={{marginLeft:100}}>
-             <img src={fert} style={{width:"100%"}}></img>
-             <h3 style={{marginTop:20}}>Price starting from: Rs. 500 </h3>
-                <Button variant="primary" style={{borderRadius:"20px", marginTop:20,marginBottom:100}}>
-                  Buy Now
-                </Button>
-             </div>
+           <Card style={{ width: '30rem',padding:30 }}>
+              <Card.Img variant="top" src={fert} />
+              <Card.Body>
+                <Card.Title><h1>Fertilizers</h1></Card.Title>
+                <Card.Text>
+                  Fertilizers are necessary for good health of crops which will inturn increase production.
+                </Card.Text>
+                <Button variant="primary">Buy: From Rs.500</Button>
+              </Card.Body>
+            </Card>
            </div>
 
 
            <div style={{display:"flex", justifyContent:"center"}}>
-             <h2>3. Pesticides</h2>
-             
-             <div style={{marginLeft:100}}>
-             <img src={pest} style={{width:"100%"}}></img>
-             <h3 style={{marginTop:20}}>Price starting from: Rs. 500 </h3>
-                <Button variant="primary" style={{borderRadius:"20px", marginTop:20,marginBottom:100}}>
-                  Buy Now
-                </Button>
-             </div>
+           <Card style={{ width: '30rem',padding:30 }}>
+              <Card.Img variant="top" src={pest} />
+              <Card.Body>
+                <Card.Title><h1>Pesticides</h1></Card.Title>
+                <Card.Text>
+                  Good Quality pesticides will protect your crops from unwanted insects.
+                </Card.Text>
+                <Button variant="primary">Buy: From Rs.500</Button>
+              </Card.Body>
+            </Card>
            </div>
 
 
            <div style={{display:"flex", justifyContent:"center"}}>
-             <h2>4. Tools</h2>
-             
-             <div style={{marginLeft:100}}>
-             <img src={mach} style={{width:"100%"}}></img>
-             <h3 style={{marginTop:100}}>Price starting from: Rs. 10000 </h3>
-                <Button variant="primary" style={{borderRadius:"20px", marginTop:20,marginBottom:100}}>
-                  Buy Now
-                </Button>
-             </div>
+           <Card style={{ width: '30rem',padding:30 }}>
+              <Card.Img variant="top" src={mach} />
+              <Card.Body>
+                <Card.Title><h1 style={{marginTop:130}}>Machinery</h1></Card.Title>
+                <Card.Text>
+                 You can buy all the machinery and tools required for vaious work.
+                </Card.Text>
+                <Button variant="primary" >Buy: From Rs.10000</Button>
+              </Card.Body>
+            </Card>
            </div>
           
 

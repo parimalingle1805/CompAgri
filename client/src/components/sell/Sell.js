@@ -3,6 +3,9 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
 import {Navbar,Nav,NavDropdown,Form,FormControl,Button,Container,Row,Col,Card,ListGroup,ListGroupItem,Modal} from "react-bootstrap";
+import farm from "./farm.jpg";
+import farm1 from "./farm1.jpg";
+
 
 class Dashboard extends Component {
   onLogoutClick = e => {
@@ -23,7 +26,7 @@ render() {
     
 return (
     
-      <div style={{width:"100%",height:"100%"}}>
+      <div style={{width:"100%",height:"750px", backgroundImage: `url(${farm})`,backgroundSize:"cover",backgroundRepeat:"no-repeat"}}>
      
          <Navbar bg="dark" variant="dark" expand="lg" >
              <Navbar.Brand href="/dashboard"><h1>Farmer's Forum</h1></Navbar.Brand>
@@ -42,7 +45,7 @@ return (
         
        <div>
          <div style={{display:"flex", justifyContent:"center", marginTop:50}}>
-           <h1>You can sell your Products here</h1>
+           <h1 style={{fontSize:50}}>Sell your Products here</h1>
          
            </div>
            <div style={{display:"flex", justifyContent:"center",marginTop:100}}>
@@ -51,7 +54,7 @@ return (
                 </Button>
             </div>
            <div style={{display:"flex", justifyContent:"center", marginTop:50}}>
-           <Modal show={this.state.isOpen} onHide={this.closeModal} style={{backgroundColor:"darkgrey"}}>
+           <Modal show={this.state.isOpen} onHide={this.closeModal} style={{backgroundImage: `url(${farm1})`}}>
           
             <Modal.Body>
                 <Form>
