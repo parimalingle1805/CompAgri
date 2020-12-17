@@ -57,7 +57,7 @@ return (
                 <Form>
                     <Form.Group controlId="exampleForm.ControlInput1">
                        
-                        <Form.Control type="email" placeholder="Email Addres" />
+                        <Form.Control type="email" placeholder="Email Address" />
                     </Form.Group>
                     <Form.Group controlId="exampleForm.ControlInput2">
                         <Form.Label>Product Title</Form.Label>
