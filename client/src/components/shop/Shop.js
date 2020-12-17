@@ -1,8 +1,8 @@
-import React, { Component } from "react";
+import React, { Component,useState } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
-import {Navbar,Nav,NavDropdown,Form,FormControl,Button,Container,Row,Col,Card,ListGroup,ListGroupItem} from "react-bootstrap";
+import {Navbar,Nav,NavDropdown,Form,FormControl,Button,Container,Row,Col,Card,ListGroup,ListGroupItem,Modal} from "react-bootstrap";
 
 
 class Dashboard extends Component {
@@ -11,13 +11,16 @@ class Dashboard extends Component {
     this.props.logoutUser();
   };
   componentDidMount(){
-    document.title = "Shop | Farmer's Forum"
+    document.title = "Shop | Farmer's Forum";
   }
+  
 render() {
     const { user } = this.props.auth;
+    
 return (
     
-      <div>
+      <div style={{width:"100%",height:"100%"}}>
+     
          <Navbar bg="dark" variant="dark" expand="lg" >
              <Navbar.Brand href="/dashboard"><h1>Farmer's Forum</h1></Navbar.Brand>
              <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -32,8 +35,9 @@ return (
                       
             </Navbar.Collapse>
         </Navbar>
+        
        
-
+  
         
 
         

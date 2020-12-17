@@ -14,6 +14,11 @@ class Dashboard extends Component {
   componentDidMount(){
     document.title = "Dashboard | Farmer's Forum"
   }
+  state = {
+    isOpen: false
+  };
+  openModal = () => this.setState({ isOpen: true });
+  closeModal = () => this.setState({ isOpen: false });
 render() {
     const { user } = this.props.auth;
 return (
@@ -97,7 +102,40 @@ return (
          </Card>
 
         </div>
-       
+        <div style={{marginLeft:1300}}>
+          <Button variant="primary" onClick={this.openModal} style={{borderRadius:"20px"}}>
+            Quick question
+          </Button>
+        </div>
+        
+        <Modal show={this.state.isOpen} onHide={this.closeModal} style={{backgroundColor:"darkgray"}}>
+          <Modal.Header closeButton>
+            <Modal.Title>Submmit your query here!</Modal.Title>
+          </Modal.Header>
+            <Modal.Body>
+              <Form>
+                    <Form.Group controlId="exampleForm.ControlInput1">
+                      <Form.Label>Email address</Form.Label>
+                      <Form.Control type="email" placeholder="name@example.com" />
+                    </Form.Group>
+                    
+                  
+                    <Form.Group controlId="exampleForm.ControlTextarea1">
+                      <Form.Label>Describe problem here</Form.Label>
+                      <Form.Control as="textarea" rows={5} />
+                    </Form.Group>
+              </Form>
+            </Modal.Body>
+          <Modal.Footer>
+          <Button variant="primary" style={{marginRight:10}} onClick={this.closeModal}>
+              Send
+            </Button>
+            <Button variant="secondary" onClick={this.closeModal}>
+              Close
+            </Button>
+          </Modal.Footer>
+        </Modal>
+
          
 
       </div>
