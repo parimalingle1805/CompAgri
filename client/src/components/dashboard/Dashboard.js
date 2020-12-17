@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
 import {Navbar,Nav,NavDropdown,Form,FormControl,Button,Container,Row,Col,Card,ListGroup,ListGroupItem} from "react-bootstrap";
-import headerImg from './headerImg.jpg'
+import headerImg from './headerImg.jpg';
 
 
 class Dashboard extends Component {
@@ -25,7 +25,7 @@ return (
              <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
                     <Nav.Link href="/dashboard" style={{marginLeft:30, fontSize:30}}>Dashboard</Nav.Link>
-                    <Nav.Link href="/dashboard" style={{marginLeft:30, fontSize:30}}>Shop</Nav.Link>
+                    <Nav.Link href="/shop" style={{marginLeft:30, fontSize:30}}>Shop</Nav.Link>
                     <Nav.Link href="/dashboard" style={{marginLeft:30, fontSize:30}}>Sell</Nav.Link>
                     <Nav.Link href="#link" onClick={this.onLogoutClick} style={{marginLeft:650, fontSize:30}}>Log Out</Nav.Link>
             
@@ -53,7 +53,7 @@ return (
                 
                 <Card.Body>
                     <div style={{border: '2px solid blue'}}>
-                    <Card.Link href="#" style={{marginLeft:85}}>Purchase</Card.Link>
+                    <Card.Link href="/shop" style={{marginLeft:85}}>Purchase</Card.Link>
                     </div>
                    
                 </Card.Body>
