@@ -8,10 +8,7 @@
         "start": "node server.js",
         "server": "nodemon server.js",
         "client": "npm start --prefix client",
-        "dev": "concurrently \"npm run server\" \"npm run client\"",
-        "predeploy":"npm run build",
-        "deploy":"gh-pages -d build"
-        
+        "dev": "concurrently \"npm run server\" \"npm run client\""
     },
     "repository": {
         "type": "git",
@@ -22,7 +19,7 @@
     "bugs": {
         "url": "https://github.com/parimalingle1805/CompAgri/issues"
     },
-    "homepage": "http://parimalingle1805.github.io/CompAgri",
+    "homepage": "https://github.com/parimalingle1805/CompAgri#readme",
     "dependencies": {
         "bcryptjs": "^2.4.3",
         "body-parser": "^1.19.0",
